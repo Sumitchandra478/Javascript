@@ -26,6 +26,14 @@
 // let getBoolean=Boolean(num1)
 // console.log(getBoolean)
 
-let str=undefined;
-str2=String(str);
-console.log(str2);
+// let str=undefined;
+// str2=String(str);
+// console.log(str2);
+
+// Operations
+// console.log(2+3+"5");  //55
+// console.log("2"+3+5);   //235
+
+let y=3;
+const x=y++;
+console.log(x);
