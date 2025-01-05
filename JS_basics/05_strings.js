@@ -27,7 +27,22 @@
 //Split
 
 
-const myName="Sumit_chandra478"
+const myName="Sumit_chandra"
 
-console.log(myName.split('_'))
+// console.log(myName.split('_'))
+
+// console.log(myName.slice(-13)) //13 is length so op==> Sumit_Chandra
+// console.log(myName.slice(-12)) //umit_chandra and not a
+// console.log(myName.slice(-3))  //dra
+// console.log(myName.slice(-13,-3))  //Sumit_chan and not Sumi
+// console.log(myName.slice(-13,3))   //Sum
+
+// console.log("try")
+// console.log(myName.slice(-12,3)) //um
+// console.log(myName.slice(-12,-3))  //umit_chan
+// console.log(myName.slice(3))  //it_chandra
+// console.log(myName.slice(2,-8))  //mit
+
+// console.log(myName.splice(2))  splice is not there in string
+
 

@@ -7,7 +7,7 @@ let myDate=new Date();
 
 // //Interview typeOf Date ==>object
 
-// console.log(typeOf(myDate) );
+console.log(typeof myDate);
 
 // let myDate=new Date(2024,0,5,3,5,56)
 // console.log(myDate)
@@ -18,10 +18,10 @@ let myDate=new Date();
 // console.log(myDate.getTime());
 // console.log(myDate.getDay())  //if returns 6 then last day of week means Sun
 
-myDate.toLocaleString('default',{
-    weekday:"long"
-})
-console.log(myDate.toLocaleString())
+// myDate.toLocaleString('default',{
+//     weekday:"long"
+// })
+// console.log(myDate.toLocaleString())
 
 
 
