@@ -30,4 +30,4 @@ myObj.greeting=function(){
 myObj.greeting2=function(){
     console.log(`Hello JS User, ${this.name}`)
 }
-console.log(myObj.greeting2())
+console.log(myObj.greeting2())  //gives undefined
