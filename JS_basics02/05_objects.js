@@ -5,5 +5,10 @@ const course={
 }
 
 console.log(course.instructor)
-const {instructor}=course;
-console.log(instructor)
+const {instructor:teacher}=course;
+// console.log(instructor)
+console.log(teacher)
+
+console.log(course["teacher"])
+
+console.log(course)

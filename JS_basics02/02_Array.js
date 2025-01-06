@@ -2,8 +2,10 @@ const marvelHeroes=["thor","Ironman","Spiderman"]
 const dc_heroes=["superman","flash","batman"]
 // console.log(marvelHeroes.shift())  //thor
 // console.log(marvelHeroes) //[ 'Ironman', 'Spiderman' ]
-const try1=marvelHeroes.join(dc_heroes)
-console.log(try1)
+// const try1=marvelHeroes.join(dc_heroes)
+// console.log(try1)
+
+console.log(...marvelHeroes,...dc_heroes)
 
 // const newHeroes=marvelHeroes
 // console.log(newHeroes)
