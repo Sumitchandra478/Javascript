@@ -71,4 +71,18 @@
 // let myName="Dev"
 // console.log(myName.charAt(5))
 
-console.log(Array.from(({name:"Sumit"})))
+// console.log(Array.from(({name:"Sumit"})))   //[]
+
+// let num1
+// num1=null ?? undefined
+// console.log(num1)  //undefined
+// let num2
+// num2=undefined??null 
+// console.log(num2)  //null
+
+let a='55'
+let b=5
+let c
+c=a-b
+console.log(typeof c);
+

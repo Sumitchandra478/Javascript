@@ -4,11 +4,13 @@ const course={
     instructor:"Hitesh"
 }
 
-console.log(course.instructor)
+//console.log(course.instructor)
 const {instructor:teacher}=course;
-// console.log(instructor)
-console.log(teacher)
+// // console.log(instructor)
+// console.log(teacher)
+const {instructor}=course
+console.log(instructor)
 
-console.log(course["teacher"])
+// console.log(course["teacher"])
 
-console.log(course)
+// console.log(course)
