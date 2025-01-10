@@ -41,14 +41,20 @@ myObj.name="Chandra"
 // const {name}=myObj
 // console.log(name)
 // console.log(myObj)
-console.log(Object.values(myObj))
+// console.log(Object.values(myObj))
 
-console.log(myObj.name)
-const {name}=myObj
-console.log(`${name}`)
+// console.log(myObj.name)
+// const {name}=myObj
+// console.log(`${name}`)
 
-console.log(myObj["name"])
+// console.log(myObj["name"])
 
-for(const key in myObj){
-    console.log(myObj[key])
+// for(const key in myObj){
+//      console.log(key)
+//     // console.log(myObj[key])
+// }
+
+for (const key of myObj) {
+    console.log(key)
+    
 }
