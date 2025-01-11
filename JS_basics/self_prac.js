@@ -80,9 +80,25 @@
 // num2=undefined??null 
 // console.log(num2)  //null
 
-let a='55'
-let b=5
-let c
-c=a-b
-console.log(typeof c);
+// let a='55'
+// let b=5
+// let c
+// c=a-b
+// console.log(typeof c);
+
+const myArr=[3,5,7,2,4,9]
+//myArr.forEach( (item,index,arr)=>{console.log(`${item} ,${index},${arr}`)} )
+
+// myArr.filter( () )  
+
+// const somename=myArr.filter((item)=>(item>4))
+// console.log(somename);
+
+// const myReturn=myArr.map((item)=> item+10)
+// console.log(myReturn);
+
+// const myReturn2=myArr.reduce( (total,item)=>{return total+item},0 )
+// console.log(myReturn2)
+
+
 
