@@ -17,17 +17,19 @@
 
   
    const myItems=["item1","item 2","item 3"]
+   myItems[2]="java";
    myItems.forEach( (item)=>{
     const myList=document.createElement('li')
    const myTexts= document.createTextNode(item)
-    // myList.appendChild(myTexts)
+    myList.appendChild(myTexts)
     const aTag=document.createElement('a')
     aTag.className="A tag"
-    const text=document.createTextNode("anchor tag")
-    aTag.appendChild(text)
+    // const text=document.createTextNode("anchor tag")
+    // aTag.appendChild(text)
     myList.appendChild(aTag)
     ul.appendChild(myList)
 } )
+
 
      console.log(div)
      div.appendChild(ul)

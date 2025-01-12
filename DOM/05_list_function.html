@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List using Function</title>
+</head>
+<body>
+    <ul class="language">
+        <li> Javascript </li>
+    </ul>
+    
+</body>
+
+<script>
+
+const collect=document.querySelector('.language')  //gives nodeList
+//    and not const try1=document.getElementsByClassName('.language') cz it gives just html collection and not everything inside that class
+    function addLanguage(lang){
+      const myList= document.createElement('li')
+      const text=document.createTextNode(lang)
+      myList.appendChild(text)
+
+
+
+      collect.appendChild(myList)
+    }
+    addLanguage("python")
+    addLanguage("Java")
+
+    console.log(collect)
+
+    //editing list value
+
+    const selecting=document.querySelector('li:nth-child(3)')  //entire 3rd list is selected
+    console.log(selecting)   //python is selected
+
+    //adding some extra text
+    selecting.appendChild(document.createTextNode(" -my lang"))
+
+    //editing 
+
+    const newLi=document.createElement('li')
+   //selecting.replaceWith( newLi.appendChild(document.createTextNode("this is deleted part")))  //list is edited not just its text
+
+   newLi.textContent="Method-2"
+   selecting.replaceWith(newLi)  //here list is edited
+
+   const firstLang=document.querySelector("li:first-child")
+   firstLang.outerHTML="<li> Mehod-3 </li> "
+
+
+    //deleting
+
+    const del=document.querySelector("li:last-child")
+    del.remove()
+    
+
+
+
+
+
+</script>
+</html>
