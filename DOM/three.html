@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    
+</body>
+
+<script>
+    const div=document.createElement('div')
+    console.log(div)
+    div.className='menu'   //to add class ,className is used and not class
+    div.id=Math.floor((Math.random()*10)+1)      //to add id
+    div.setAttribute("title","My-title")   //or div.title="sumit"
+    div.style.background="green"
+    div.style.padding='15px'
+    //div.innerText="chai aur Javascript"  //this adds text inside div or below
+    const addText=document.createTextNode("Chai aur Javascript")   //here 1st text node is created 
+    div.appendChild(addText)  //then text node is added inside div
+
+    document.body.appendChild(div)
+
+</script>
+</html>
