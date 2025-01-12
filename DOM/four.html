@@ -20,7 +20,7 @@
    myItems.forEach( (item)=>{
     const myList=document.createElement('li')
    const myTexts= document.createTextNode(item)
-    myList.appendChild(myTexts)
+    // myList.appendChild(myTexts)
     const aTag=document.createElement('a')
     aTag.className="A tag"
     const text=document.createTextNode("anchor tag")
@@ -31,6 +31,9 @@
 
      console.log(div)
      div.appendChild(ul)
+
+     document.body.appendChild(div)
+
     
 
 
