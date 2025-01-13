@@ -55,6 +55,6 @@ myObj.name="Chandra"
 // }
 
 for (const key of myObj) {
-    console.log(key)
+    console.log(key)  //object is not iterable
     
 }
