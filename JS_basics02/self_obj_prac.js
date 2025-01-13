@@ -4,7 +4,10 @@ const myObj={
         Village:"Laxmipur",
         Post:"Gauripur"
     },
-    email:"sumitchandra478@gmail.com"
+    email:"sumitchandra478@gmail.com",
+    greeting2 :function(){
+      console.log(`Hello ${this.name}`)
+    }
 }
 
 myObj.name="Dev"   //causes permanent change
@@ -83,6 +86,30 @@ const {name}=myObj
 
 myObj["name"]="Sumit Chandra"
 // console.log(myObj)
+
+//USe function to print value of name which is present in Object
+
+const myObj4={
+  name:"Sumit",
+  address:{
+      Village:"Laxmipur",
+      Post:"Gauripur"
+  },
+  email:"sumitchandra478@gmail.com",
+  greeting2 :function(){
+    console.log(`Hello ${this.name}`)
+  }
+}
+
+         //OR
+         
+myObj.greeting=function(){
+  console.log(`Hello ${this.name}`)
+}
+
+// myObj.greeting()
+
+myObj.greeting2()
 
 
 
