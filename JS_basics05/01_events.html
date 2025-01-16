@@ -70,7 +70,8 @@ imgCollector.forEach(function(item){
 
 const removeIt=e.target.parentNode  //this gives entire list and not just image
 // removeIt.remove() or
-removeIt.parentNode.removeChild(removeIt)
+// removeIt.parentNode.removeChild(removeIt)   ==> will remove li as above one
+console.log(e.target.tagName)
 
     },false)
 })
