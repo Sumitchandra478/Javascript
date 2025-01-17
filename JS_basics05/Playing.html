@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child divs into array</title>
+</head>
+<body>
+    <div class="buttons">
+        <div class="button1">
+            Days
+            <ul>
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+            </ul>
+
+        </div>
+        <div class="button2">Weeks</div>
+        <div class="button3">Months</div>
+    </div>
+    
+</body>
+
+<!-- I want days weeks and months into an HTML collection -->
+
+<script>
+    //METHOD 1
+    const buttons=document.querySelector('.buttons')
+    const childele=buttons.children
+    // console.log(childele)
+    const myArray=Array.from(childele,element=>element.innerText)
+    console.log(myArray)
+    // const myArray=Array.from(childele)  //create array or use for loop
+    // myArray.forEach((item)=>{
+    //     console.log(item.innerText)
+    // })
+
+
+    //METHOD 2
+    // const buttons=document.querySelectorAll('.buttons')
+    // console.log(buttons);
+    // console.log(buttons[0].innerText)
+
+
+    //METHOD 3
+     const buttons2=document.querySelectorAll('.buttons>*')
+    //  console.log(buttons2)
+const myArr=Array.from(buttons2 ,element=>element.innerText)
+console.log(myArr)
+
+
+</script>
+</html>
