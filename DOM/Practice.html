@@ -5,99 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body class="container" style="background-color: #212121; color:#fff">
-    <!-- <div class="container" style="background-color: #212121; color:#fff">
+<body >
+    <div class="container" style="background-color: #212121; color:#fff">
         <div class="day">Mon</div>
         <div class="day">Tue</div>
         <div class="day">Wed</div>
         <div class="day">Thur</div>
         <div class="day">Fri</div>
-    </div> -->
+    </div>
 </body>
+<!--1st Part //From parent div,how to access its child divs and texts inside child  -->
+ <!-- <script>
 
-<!-- <script>
-    //From parent div,how to access its child divs and texts inside child 
-    // const collect=document.getElementsByClassName('.container')
+//use of div.getElmentsByClassName
+
+ const div=document.getElementsByClassName('day')
+// const div1=document.getElementsByClassName('container')
+  
+//console.log(div)
+//     for(let i=0;i<div.length;i++){
+//    console.log(div[i].textContent)
+//    }
+//     console.log(div[0].innerText)
+//     console.log(div1)
+
+    //Use of querySelector
+
+
     const collect=document.querySelector('.container')
-   // console.log(collect)
-   const childele= collect.children
-  // console.log(childele)
-  // console.log(collect.firstElementChild.innerHTML)
+    // console.log(collect)
+    const collect1=document.querySelector('.day')
+  //   console.log(collect1)
+     
+    //  console.log(collect.children)
 
-   for(let i=0;i<childele.length;i++){
-   // console.log(childele[i].textContent)
-   }
+   const parent=document.querySelector('.day').parentElement
+   console.log(parent)
+   console.log('Nodes:',parent.childNodes)
 
-    console.log(document.querySelector('.day').parentElement)
-    console.log("Nodes:",collect.childNodes)
+//Conversion of HTML collection to array
+
+ //  const childele= collect.children  
+//    console.log(childele)
+  // const myArr=Array.from(childele)
+//  console.log(collect.lastElementChild.innerHTML)
+//myArr.forEach((item)=>{
+    // console.log(item)
+    // console.log(item.innerText)
+    // console.log(item.innerHTML)
+// })
+
    
+</script>  -->
+ 
+
+
+<!--2nd Part creating DIV and text   -->
+
+<!--<script>
+const div=document.createElement('div')
+div.className='my-class'
+div.id=parseInt(Math.random()*10+1)
+div.setAttribute('title','my-title')
+
+const myText=document.createTextNode("Hello world ,Here I am adding text withing div using create Text element and not innerText")
+div.appendChild(myText)
+console.log(div)
+
+//Ading div into HTML body
+const body=document.querySelector('body')
+body.appendChild(div)
+
+
+div.style.padding='15px'
+div.style.backgroundColor="pink"
+div.style.color="blue"
+
+//Same thing can be done using attribute but there is a difference
+
+//  const div1=document.createElement('div')
+// const attr= document.createAttribute('class')
+// div1.setAttribute('attr','my-class')
+ 
+//  div.innerText='Hello world'
+//  console.log(div1.innerText)  //cant be added as false div
+
+
 </script> -->
 
-<!-- //creating DIV and text 
 
-<script>
-    const div=document.createElement('div')
-    div.className='menu'
-    div.id=Math.floor(Math.random()*10+1)
-    div.setAttribute=('title','my-Title')
-    div.style.padding='15px'
-    div.style.backgroundColor="pink"
-    div.style.color="black"
-   
-   console.log(div)
-   div.innerHTML="Another way to add text"
-   const myText= document.createTextNode("Lorem lorem 5")
-   div.appendChild(myText)
+
+<!-- 3rd Part List creation using loop -->
+ 
+<!--<script>
+const div=document.createElement('div')
+div.className='menu'
+const ul=document.createElement('ul')
+div.appendChild(ul)
+
+const myArray=['item1','item2','item3']
+myArray.forEach((item)=>{
+    const li=document.createElement('li')
+   // li.appendChild=item //wont work as append is done in created text or element
+   const myText=document.createTextNode(item)
+li.appendChild(myText)
+    ul.appendChild(li)
+})
+
+const listbreak=document.createTextNode('List breaks here')
+div.appendChild(listbreak)
+
 document.body.appendChild(div)
 
-</script> -->
 
-<!-- <script>
-    //List creation using loop
- const div=document.createElement('div')
- const ul=document.createElement('ul')
- div.appendChild(ul)
+
+   
+ const div1=document.createElement('div')
+ const ul1=document.createElement('ul')
+ div1.appendChild(ul1)
   
   const list_items=["Sumit","Chandra","Dev"]
+  const list_items2=["Name","SirNAme","Mobile no"]
  
-//   for(let i=0;i<list_items.length;i++){
-//     const myList=document.createElement('li')
-//     const myText=document.createTextNode(list_items[i])
-//     myList.appendChild(myText)
-//     ul.appendChild(myList)
+//
+// Same thing can be done using for loop as well
+//    for(let i=0;i<list_items2.length;i++){
+//     const myList1=document.createElement('li')
+//     const myText=document.createTextNode(list_items2[i])
+//     myList1.appendChild(myText)
+//     ul1.appendChild(myList)
 //   }
-//   console.log(div)
+//   console.log(div1)
 
    list_items.forEach( (item)=>{
     const myList=document.createElement('li')
     myList.innerText=item
-    ul.appendChild(myList)
+    ul1.appendChild(myList)
 
    } )
-   console.log(div)
+   console.log(div1)
+   document.body.appendChild(div1)
 
 </script> -->
 
-<!-- //list using function -->
-<script>
-  
+<!--4th Part list using function  -->
+<!--<script>
 const div=document.createElement('div')
- const ul=document.createElement('ul')
-((item)=> {
-    const myList = document.createElement('li');
-    myList.appendChild(document.createTextNode(item));
-    ul.appendChild(myList);
-})
-("sumit");
-
+const ul=document.createElement('ul')
 div.appendChild(ul)
-console.log(div)
+function myList(item){
+    const li=document.createElement('li')
+    li.innerText=item
+    ul.appendChild(li)
+}
+myList("Sumit")
+myList("Chandra")
+myList("Dev")
+
+document.body.appendChild(div)
+
+</script>-->
 
 
-
-
-</script>
-
-
-
-</html>
+</html> 
