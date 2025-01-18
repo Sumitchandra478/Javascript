@@ -14,7 +14,7 @@
             <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
             <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><a style="color: aliceblue;" href="https://google.com" id="google" target="_blank">Google</a></li>
+            <li class="aTag"><a style="color: aliceblue;" href="https://google.com" id="google" target="_blank">Google</a></li>
         </ul>
    </div>
 </body>
@@ -61,20 +61,29 @@
 
 // console.log(document.querySelector('#images'))
 
+
 const imgCollector=document.querySelectorAll('li')
 
-imgCollector.forEach(function(item){
-    item.addEventListener('click',function(e){
-    //item.querySelector('img')  image links will be printed
-// e.target.parentNode.innerHTML=''  //image deleted but bullets present
+console.log(imgCollector)
 
-const removeIt=e.target.parentNode  //this gives entire list and not just image
-// removeIt.remove() or
-// removeIt.parentNode.removeChild(removeIt)   ==> will remove li as above one
-console.log(e.target.tagName)
+imgCollector.forEach(function(item){
+    console.log(item)
+    item.addEventListener('click',function(e){
+     const removeIt=e.target.parentNode    //e.target is image and e.target.parentNode is li
+   if(removeIt.className=='aTag'){
+    removeIt.parentNode.remove()
+   }
+   else{
+   removeIt.remove()
+   }
+
 
     },false)
+
 })
+
+
+
 
 
 
