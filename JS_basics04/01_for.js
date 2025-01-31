@@ -9,5 +9,5 @@ for(let j=0;j<10;j++){
 let num=1
 do{
     num++
-}while(num<=10);
-console.log(num)
+    console.log(num)
+}while(num<=10)
